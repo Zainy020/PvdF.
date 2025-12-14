@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <title>Partij voor de Fufu</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/main.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partij voor de Fufu</title>
+
+<style>
+/* ===== CSS ===== */
+:root {
+  --rood: #b71c1c;
+  --groen: #1b5e20;
+  --wit: #ffffff;
+  --grijs: #f4f4f5;
+  --donker: #1f2937;
+  --accent: #e53935;
+}
+
+* { box-sizing: border-box; margin:0; padding:0; font-family:'Inter', sans-serif; }
+
+body { background: var(--grijs); color: var(--donker); line-height:1.6; }
+
+header { background: linear-gradient(135deg, var(--rood), var(--groen)); color:white; padding:30px 20px; text-align:center; }
+header h1 { font-size:36px; margin-bottom:15px; font-weight:700; }
+
+nav { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin-top:10px; }
+nav button { background: rgba(255,255,255,0.2); border:none; padding:10px 18px; border-radius:999px; color:white; font-weight:600; cursor:pointer; transition:0.3s; }
+nav button:hover { background: rgba(255,255,255,0.35); }
+
+main { max-width:1000px; margin:40px auto; padding:0 20px; }
+.page { display:none; }
+.page.active { display:block; }
+
+h2 { font-size:30px; margin-bottom:20px; color: var(--rood); border-bottom:3px solid var(--groen); display:inline-block; padding-bottom:5px; }
+p { margin-bottom:16px; font-size:16px; }
+ul { margin-top:10px; padding-left:20px; }
+ul li { margin-bottom:10px; }
+
+.card { background: var(--wit); padding:25px; border-radius:18px; margin:20px 0; box-shadow:0 10px 25px rgba(0,0,0,0.08); }
+
+button.primary { display:inline-block; background: var(--groen); color:white; font-weight:700; padding:12px 20px; border-radius:12px; border:none; cursor:pointer; transition:0.3s; }
+button.primary:hover { background:#2e7d32; }
+
+.notice { margin-top:20px; padding:20px; border-radius:15px; background: linear-gradient(135deg,#ffebee,#e8f5e9); border-left:6px solid var(--accent); }
+
+footer { background:#0f172a; color:#cbd5e1; text-align:center; padding:25px 10px; font-size:14px; margin-top:40px; border-top:4px solid var(--groen); }
+
+@media(max-width:600px){
+  header h1{ font-size:28px; }
+  nav{ gap:6px; }
+  h2{ font-size:24px; }
+}
+</style>
+
 </head>
 <body>
 
@@ -42,12 +89,21 @@
 
   <section id="register" class="page">
     <h2>Aanmelden</h2>
-    <p>Word lid van de Partij voor de Fufu. Leden kunnen stemmen, ideeën indienen en meebeslissen.</p>
+    <div class="notice">
+      <strong>BINNENKORT BIJ PvdF</strong>
+      <p>Word lid van de Partij voor de Fufu. Leden kunnen stemmen, ideeën indienen en meebeslissen.</p>
+    </div>
+    <div class="card">
+      <p>Registratieformulier komt hier.</p>
+    </div>
   </section>
 
   <section id="stemmen" class="page">
     <h2>Stemmen</h2>
-    <p>BINNENKORT BIJ PvdF: Je kunt stemmen en resultaten bekijken zodra je ingelogd bent.</p>
+    <div class="notice">
+      <strong>BINNENKORT BIJ PvdF</strong>
+      <p>Hier kun je straks stemmen en resultaten bekijken zodra je ingelogd bent.</p>
+    </div>
   </section>
 
   <section id="contact" class="page">
