@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Partij voor de Fufu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<header>
+  <h1>Partij voor de Fufu</h1>
+  <nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('breaking')">Breaking Fufu News</button>
+    <button onclick="showPage('leden')">Onze Leden</button>
+    <button onclick="showPage('register')">Aanmelden</button>
+    <button onclick="showPage('stemmen')">Stemmen</button>
+    <button onclick="showPage('contact')">Contact</button>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="page active">
+    <h2>Welkom</h2>
+    <p>De Partij voor de Fufu is een progressieve beweging, gebaseerd in Amsterdam.</p>
+  </section>
+
+  <section id="breaking" class="page">
+    <h2>Breaking Fufu News</h2>
+    <p>Actueel partij- en formatienieuws.</p>
+  </section>
+
+  <section id="leden" class="page">
+    <h2>Onze Leden</h2>
+    <ul>
+      <li>Zainy</li>
+      <li>Fufu Prime</li>
+      <li>Lid 003</li>
+    </ul>
+  </section>
+
+  <section id="register" class="page">
+    <h2>Aanmelden</h2>
+    <p>Word lid van de Partij voor de Fufu. Leden kunnen stemmen, ideeën indienen en meebeslissen.</p>
+  </section>
+
+  <section id="stemmen" class="page">
+    <h2>Stemmen</h2>
+    <p>BINNENKORT BIJ PvdF: Je kunt stemmen en resultaten bekijken zodra je ingelogd bent.</p>
+  </section>
+
+  <section id="contact" class="page">
+    <h2>Contact</h2>
+    <p>Email: pvdf@gmail.com</p>
+    <p>TikTok: @partijvoordefufu</p>
+  </section>
+</main>
+
+<footer>
+  © Alle rechten voorbehouden – Partij voor de Fufu
+</footer>
+
+<script>
+  function showPage(id){
+    document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+</script>
+
+</body>
+</html>
